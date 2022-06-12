@@ -5,7 +5,7 @@ const getAccuracy = (value) => {
     const numberOfDigitsAfterComma = value.toString().split(".")[1].length;
     return numberOfDigitsAfterComma;
   }
-  return 1;
+  return 0;
 };
 
 counters.forEach((counter) => {
@@ -17,17 +17,29 @@ counters.forEach((counter) => {
     const endValue = Number(counter.dataset.counterEnd);
     const duration = Number(counter.dataset.counterDuration);
     const delay = 100;
-    const accuracy = Number(getAccuracy(endValue) - 1);
-    const stepSize = Number(endValue / (duration / delay)).toFixed(accuracy);
+    const accuracy = Number(getAccuracy(endValue));
+    const stepSize = Number(endValue / (duration / delay));
     let value = 0;
 
     const handleInterval = () => {
       value = Number(value) + Number(stepSize);
-      if (value > endValue) {
-        clearInterval(interval);
-        counter.innerText = endValue;
-        return;
+
+      console.log(stepSize);
+
+      if (endValue > 0) {
+        if (value > endValue) {
+          clearInterval(interval);
+          counter.innerText = endValue;
+          return;
+        }
+      } else {
+        if (value < endValue) {
+          clearInterval(interval);
+          counter.innerText = endValue;
+          return;
+        }
       }
+
       counter.innerText = value.toFixed(accuracy);
     };
 

@@ -21,7 +21,7 @@ This is a animated counter written in pure JavaScript.
 Instance of counter have to has a couple of `data` attributes:
 
 - `data-name='counter'` - required as it is without changes,
-- `data-counter-end='15'` - required, value have to be a positive number, in this example: 15,
+- `data-counter-end='15'` - required, value have to be a number - positive or negative, in this example: 15,
 - `data-counter-duration='1000'` - required, value have to be a positive, natural number. It means a duration of animation in milliseconds - in this example 1000.
 
 ## Live
