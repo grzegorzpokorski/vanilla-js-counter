@@ -35,12 +35,12 @@ counters.forEach((counter) => {
   };
 
   const handleScroll = () => {
-    if (window.innerHeight - counter.getBoundingClientRect().top > 0) {
-      if (counter.dataset.counted == "false") {
-        handleAnimation(counter);
-        window.removeEventListener("scroll", handleScroll, counter);
-        counter.dataset.counted = "true";
-      }
+    const posiiton = counter.getBoundingClientRect();
+
+    if (posiiton.top >= 0 && posiiton.bottom <= window.innerHeight) {
+      handleAnimation(counter);
+      window.removeEventListener("scroll", handleScroll, counter);
+      counter.dataset.counted = "true";
     }
   };
 
