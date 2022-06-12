@@ -1,4 +1,4 @@
-const counters = document.querySelectorAll("[data-counter=true]");
+const counters = document.querySelectorAll("[data-name=counter]");
 
 const getAccuracy = (value) => {
   if (value.toString().includes(".")) {
