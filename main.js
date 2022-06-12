@@ -40,7 +40,6 @@ counters.forEach((counter) => {
     if (posiiton.top >= 0 && posiiton.bottom <= window.innerHeight) {
       handleAnimation(counter);
       window.removeEventListener("scroll", handleScroll, counter);
-      counter.dataset.counted = "true";
     }
   };
 
