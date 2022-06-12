@@ -13,12 +13,7 @@ This is a animated counter written in pure JavaScript.
 2. Insert a counter in your html file. Example:
 
 ```html
-<span
-  class="counter"
-  data-name="counter"
-  data-counter-end="26"
-  data-counter-duration="500"
->
+<span data-name="counter" data-counter-end="26" data-counter-duration="500">
   26
 </span>
 ```
