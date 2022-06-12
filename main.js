@@ -24,8 +24,6 @@ counters.forEach((counter) => {
     const handleInterval = () => {
       value = Number(value) + Number(stepSize);
 
-      console.log(stepSize);
-
       if (endValue > 0) {
         if (value > endValue) {
           clearInterval(interval);
