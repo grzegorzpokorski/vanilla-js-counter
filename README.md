@@ -14,7 +14,7 @@ This is a animated counter written in pure JavaScript.
 
 ```html
 <span data-name="counter" data-counter-end="15" data-counter-duration="1000">
-  26
+  15
 </span>
 ```
 
